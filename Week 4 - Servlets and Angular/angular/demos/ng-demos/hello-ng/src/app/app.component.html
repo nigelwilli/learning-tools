@@ -1,0 +1,20 @@
+<h1>Intro to Angular</h1>
+
+<button (click)="show('structural')">Structural Directives</button>
+<button (click)="show('attribute')">Attribute Directives</button>
+<button (click)="show('pipes')">Pipes</button>
+
+<div *ngIf="showStructuralDirectives">
+    <h2>Structural Directives</h2>
+    <app-structural-directives></app-structural-directives>
+</div>
+
+<div *ngIf="showAttributeDirectives">
+    <h2>Attribute Directives</h2>
+    <app-attribute-directives></app-attribute-directives>
+</div>
+
+<div *ngIf="showPipes">
+    <h2>Angular Pipes</h2>
+    <app-movie-title></app-movie-title>
+</div>

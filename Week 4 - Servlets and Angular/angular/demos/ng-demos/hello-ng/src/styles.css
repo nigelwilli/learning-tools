@@ -1,0 +1,5 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body {
+    margin: 5rem 16rem;
+}
