@@ -24,7 +24,7 @@ public class StudentDriver {
 //			session = factory.getCurrentSession();
 //			
 //			// Create a Student object
-//			Student student_1 = new Student("Wezley", "Singleton", "ws@gmail.com");
+//			Student student_1 = new Student("firsrname", "lastname", "fn@gmail.com");
 //			
 //			// Start a transaction
 //			session.beginTransaction();
@@ -50,11 +50,11 @@ public class StudentDriver {
 //			
 //			// Create an array of students to be persisted
 //			Student[] students = {
-//					new Student("Blake", "Kruppa", "bk@gmail.com"),
-//					new Student("Steven", "Kelsey", "sk@gmail.com"),
-//					new Student("Genesis", "Bonds", "gb@gmail.com"),
-//					new Student("Iago", "Pereira", "ip@gmail.com"),
-//					new Student("Nigel", "Williams", "nw@gmail.com")
+//					new Student("firsrname", "lastname", "fn@gmail.com"),
+//					new Student("firsrname", "lastname", "fn@gmail.com"),
+//					new Student("firsrname", "lastname", "fn@gmail.com"),
+//					new Student("firsrname", "lastname", "fn@gmail.com"),
+//					new Student("firsrname", "lastname", "fn@gmail.com")
 //			};
 //			
 //			for(Student s : students) System.out.println(s);
@@ -81,7 +81,7 @@ public class StudentDriver {
 //			session = factory.getCurrentSession();
 //			
 //			// Add David Fay as a student to our DB
-//			Student david = new Student("David", "Fay", "df@gmail.com");
+//			Student david = new Student("firsrname", "lastname", "fn@gmail.com");
 //			
 //			session.beginTransaction();
 //			session.save(david);
@@ -127,14 +127,14 @@ public class StudentDriver {
 //			displayStudents(students);
 //			
 //			// Query for students with the last name "Singleton" (value hard-coded)
-//			Query query_2 = session.createQuery("from Student s where s.lastName = 'Singleton'", Student.class);
+//			Query query_2 = session.createQuery("from Student s where s.lastName = 'firstname'", Student.class);
 //			students = query_2.getResultList();
 //			displayStudents(students);
 //			
 //			// Query for students with a specified last name OR a specified first name (using params)
 //			Query query_3 = session.createQuery("from Student s where s.firstName = :fn OR s.lastName = :ln", Student.class);
-//			query_3.setParameter("fn", "Blake");
-//			query_3.setParameter("ln", "Kelsey");
+//			query_3.setParameter("fn", "firstname");
+//			query_3.setParameter("ln", "lastname");
 //			students = query_3.getResultList();
 //			displayStudents(students);
 //			
@@ -209,12 +209,12 @@ public class StudentDriver {
 //			displayStudents(students);
 //			
 //			
-//			// Query for students with an email of "ws@gmail.com"
+//			// Query for students with an email of "fn@gmail.com"
 //			CriteriaQuery<Student> criteria = queryBuilder.createQuery(Student.class);
 //			Root<Student> studentRoot = criteria.from(Student.class);
 //			criteria.select(studentRoot);
 //			criteria.where(
-//				queryBuilder.equal(studentRoot.get("email"), "ws@gmail.com")
+//				queryBuilder.equal(studentRoot.get("email"), "fn@gmail.com")
 //			);
 //			
 //			students = session.createQuery(criteria).getResultList();
@@ -254,7 +254,7 @@ public class StudentDriver {
 //			session.beginTransaction();
 //			
 //			Query updateQuery = session.createQuery("update Student s set s.email = :email where s.firstName = :fn");
-//			updateQuery.setParameter("email", "ad@gmail.com");
+//			updateQuery.setParameter("email", "fn@gmail.com");
 //			updateQuery.setParameter("fn", "August");
 //			updateQuery.executeUpdate();
 //			
