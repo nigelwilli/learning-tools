@@ -16,16 +16,16 @@ export class StructuralDirectivesComponent {
   // -------------------------------------
 
   people: string[] = [
-    'Wezley',
+    'Name',
     'Dave',
-    'Iago',
-    'Joe',
+    'Jack',
+    'Joel',
     'Nigel',
-    'Nico',
+    'Nick',
     'John',
-    'Max',
-    'Lucas',
-    'Gerard'
+    'Maxus',
+    'Luke',
+    'Gary'
   ];
 
   monsters: any[] = [
